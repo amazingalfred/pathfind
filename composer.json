@@ -1,0 +1,32 @@
+{
+  "name": "amazingalfred/pathfind",
+  "description": "Solution finding for shortest path",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Amazing Alfred",
+      "email": "amazingalfred@protonmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "Tests/"
+    }
+  },
+  "require-dev": {
+    "phpmd/phpmd": "2.13.0",
+    "phpunit/phpunit": "9.5.26",
+    "squizlabs/php_codesniffer": "3.7.1"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit",
+    "demo": "php -f ./demo/demo.php"
+  }
+}

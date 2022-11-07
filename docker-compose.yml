@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  composer:
+    build:
+      context: .
+      dockerfile: ComposerDockerfile
+    volumes:
+      - .:/usr/src/app
+#    env_file: ./system/virtualbox-variables.env # Resolves composer issues in virtualbox environments
+    entrypoint: ["composer"]
+    command: ["install"]
+    working_dir: /usr/src/app
+
+  php:
+    build:
+      context: ./
+      dockerfile: ./dockerfile
+    volumes:
+      - .:/var/src/app
+    working_dir: /var/src/app
